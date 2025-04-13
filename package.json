@@ -63,5 +63,6 @@
     "index.js",
     "src"
   ],
-  "type": "module"
+  "type": "module",
+  "main": "index.js"
 }

@@ -32,10 +32,17 @@ const plugin = (options = {}) => {
     throw new Error(`The specified value of 'outputColorFormat' is not contained in [${colorFormats.join()}].`);
   }
 
+  const visited = new WeakSet();
+
   return {
     postcssPlugin: 'postcss-color-converter',
     Declaration(decl) {
+      if (visited.has(decl)) {
+        return;
+      }
+
       if (!decl || !decl.prop || !decl.value || !propsWithColorRegExp.test(decl.prop) || ignoredValuesRegExp.test(decl.value)) {
+        visited.add(decl);
         return;
       }
 
@@ -46,6 +53,7 @@ const plugin = (options = {}) => {
       } catch (e) {
         console.error(e);
 
+        visited.add(decl);
         return;
       }
 
@@ -88,6 +96,7 @@ const plugin = (options = {}) => {
       });
 
       decl.value = valueObj.toString();
+      visited.add(decl);
     },
   };
 };

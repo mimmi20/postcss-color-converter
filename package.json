@@ -30,7 +30,7 @@
     "url": "https://github.com/EdMSL/postcss-color-converter/issues"
   },
   "dependencies": {
-    "color-convert": "~3.0.1",
+    "color-convert": "~3.1.0",
     "color-name": "^2.0.0",
     "postcss-values-parser": "^6.0.2"
   },

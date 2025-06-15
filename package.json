@@ -1,7 +1,7 @@
 {
   "name": "postcss-color-converter",
   "version": "1.1.2",
-  "description": "PostCSS plugin for convert colors.",
+  "description": "Post CSS plugin for color conversion.",
   "keywords": [
     "postcss-plugin",
     "color",
@@ -19,7 +19,7 @@
     "eslint": "eslint . --config eslint.config.mjs",
     "eslint-fix": "eslint . --config eslint.config.mjs --fix"
   },
-  "author": "Eduard Trayt <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
+  "author": "Eduard Trait <eduard2011rus@gmail.com> (https://github.com/EdMSL)",
   "license": "MIT",
   "repository": {
     "type": "git",
